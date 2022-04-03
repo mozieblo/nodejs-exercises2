@@ -9,6 +9,7 @@ fs.readFile('test-file.txt', () => {
   setTimeout(() => console.log('Timer 2 is finieshed'), 0);
   setTimeout(() => console.log('Timer 3 is finieshed'), 3000);
   setImmediate(() => console.log('Set Immediate 2 is finished'));
+  process.nextTick(() => console.log('process.nextTick'));
 });
 
 console.log('TOP LEVEL CODE');
